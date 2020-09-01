@@ -13,7 +13,7 @@ body{
     font-family: 'Lato','Arial','san-serif';
     font-size: 20px; /* why this font ? because the font size for the body
                     should be between 15 - 25px */
-    text-rendering: optimizeLegibility; /* CSS property provides information to the rendering 
+    text-rendering: optimizeLegibility; /* CSS property provides information to the rendering
                                         engine about what to optimize for when rendering text. */
     overflow: hidden; /* property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges. */
 
@@ -47,7 +47,7 @@ section {
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
-    
+
 }
 
 /* sticky nav */
