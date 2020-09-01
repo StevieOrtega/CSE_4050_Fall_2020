@@ -15,7 +15,7 @@ body{
                     should be between 15 - 25px */
     text-rendering: optimizeLegibility; /* CSS property provides information to the rendering
                                         engine about what to optimize for when rendering text. */
-    overflow: hidden; /* property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges. */
+    overflow: hidden; /*  property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges. */
 
 }
 
@@ -37,26 +37,54 @@ section {
 /* ------------------------------------------------- */
 /* HEADER */
 /* ------------------------------------------------- */
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(img/image2.jpg);
+    background-size:cover;
+    background-position:center;
+    background-att
+    achment: fixed;
+    height: 90vh;
+
+}
+
+.logo {
+  height: 100px;
+    width:auto;
+    float:left;
+    margin-top: 20px;
+}
 
 /* main-nav */
 .main-nav {
     float: right;
     list-style: none;
-    margin-top: 40px;
+    margin-top: 55px;
 }
 .main-nav li {
     display: inline-block;
     margin-left: 40px;
 
 }
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+
+
+}
 
 /* sticky nav */
 .sticky-nav {
-    position: fixed;
-    top:0;
-    left: 0;
+    position: fixed; /* The element is positioned relative to the viewport, which means taht it always stays in the same place even if the page is scrolled.*/
+    background-color: white;
     width: 100%;
-    background-color: aqua;
-    box-shadow: 0 2px 2px #efefef;
-    z-index: 9999;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 2px 2px #efefef;
+
 }
+
