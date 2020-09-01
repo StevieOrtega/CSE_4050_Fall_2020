@@ -30,7 +30,13 @@ section {
     padding: 80px 0;
 }
 
-
+/* --------- HEADINGS --------- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
 
 
 
@@ -47,11 +53,43 @@ header{
 
 }
 
+.shoe-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.shoe-text-box2 {
+    position: absolute;
+    width: 750px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0  2px 2px black;
+    background-color: black;
+}
+
+.shoe-text-box h1{
+  color: white;
+
+}
+
+.shoe-text-box2 h1{
+    color: white;
+    text-align: center;
+}
 .logo {
-  height: 100px;
-    width:auto;
+    top:0;
+    left: 0;
+    height: 80px;
+    width: auto;
     float:left;
     margin-top: 20px;
+
 }
 
 /* main-nav */
@@ -81,10 +119,15 @@ header{
 .sticky-nav {
     position: fixed; /* The element is positioned relative to the viewport, which means taht it always stays in the same place even if the page is scrolled.*/
     background-color: white;
-    width: 100%;
+    width: 100%; /* made the navigation bar extend all way from left to right*/
     top: 0;
     left: 0;
-    box-shadow: 2px 2px 2px #efefef;
+    box-shadow: 0  2px 2px #efefef; /* adds a blur effect to the navigation bar */
+    z-index: 9999; /* why do we want this? element with greater stack order is always in front of an element with a lower stack order.Only works on postion: fixed, sticky,...etc */
 
 }
 
+
+.shoe-text-box {
+
+}
