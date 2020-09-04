@@ -6,17 +6,89 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html,
 body{
     background: #fff;
     color: #555;
     font-family: 'Lato','Arial','san-serif';
+    font-weight: 300;
     font-size: 20px; /* why this font ? because the font size for the body
                     should be between 15 - 25px */
     text-rendering: optimizeLegibility; /* CSS property provides information to the rendering
                                         engine about what to optimize for when rendering text. */
-    overflow: hidden; /*  property specifies whether to clip the content, add a scroll bar, or display overflow content of a block-level element, when it overflows at the left and right edges. */
 
+
+}
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 /* ------------------------------------------------- */
@@ -30,6 +102,15 @@ section {
     padding: 80px 0;
 }
 
+.box{
+    padding: 1%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%
+}
+
 /* --------- HEADINGS --------- */
 h1,
 h2,
@@ -38,7 +119,49 @@ h3 {
     text-transform: uppercase;
 }
 
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
 
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom:  30px;
+    letter-spacing: 1px;
+
+}
+
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+a {
+    position: relative;
+    display: inline-block;
+}
+
+a span {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    text-align: center;
+    margin-top: -1em;
+    margin-left: -50%;
+    width: 100%;
+    height: 2em;
+    color: #000;
+    text-decoration: underline;
+    font-size: 13px
+
+}
 
 /* ------------------------------------------------- */
 /* HEADER */
@@ -47,8 +170,7 @@ header{
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(img/image2.jpg);
     background-size:cover;
     background-position:center;
-    background-att
-    achment: fixed;
+    background-attachment: fixed;
     height: 90vh;
 
 }
@@ -65,23 +187,15 @@ header{
 
 .shoe-text-box2 {
     position: absolute;
-    width: 750px;
-    top: 55%;
+    width: 1000px;
+    top: 58%;
     left: 50%;
     transform: translate(-50%,-50%);
     box-shadow: 0  2px 2px black;
+    text-align: center;
     background-color: black;
 }
 
-.shoe-text-box h1{
-  color: white;
-
-}
-
-.shoe-text-box2 h1{
-    color: white;
-    text-align: center;
-}
 .logo {
     top:0;
     left: 0;
@@ -115,6 +229,10 @@ header{
 
 }
 
+.main-nav li a:active,
+.main-nav li a:hover {
+   border-bottom: 2px solid red;
+}
 /* sticky nav */
 .sticky-nav {
     position: fixed; /* The element is positioned relative to the viewport, which means taht it always stays in the same place even if the page is scrolled.*/
@@ -128,6 +246,52 @@ header{
 }
 
 
-.shoe-text-box {
+
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 
 }
+section shoe-brands{
+    padding: 20px 0;
+}
+
+
+.shoe-brands {
+   background-color: #f4f4f4;
+}
+
+/* ------------------------------------------------- */
+/* FORM */
+/* ------------------------------------------------- */
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{outline: none;}
+
+/* ------------------------------------------------- */
+/* Footer */
+/* ------------------------------------------------- */
