@@ -9,7 +9,6 @@
         <link rel="stylesheet" type="text/css" href="Vendors/css/3cols.css">
         <link rel="stylesheet" type="text/css" href="Vendors/css/4cols.css">
         <link rel="stylesheet" type="text/css" href="Resources/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" type="text/css" href="Resources/css/queries.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
         <title>Shoe Shop</title>
@@ -21,10 +20,7 @@
                     <img src="Resources/img/Untitled%20design.png" alt="shoe shop logo" class="logo">
                     <ul class = "main-nav js--main-nav">
                         <li><a href="#brands">Brands</a></li>
-                        <li><a href="#men">Men</a></li>
-                        <li><a href="#women">Women</a></li>
-                        <li class = "logged-out"><a href="#" class="modal-trigger"  data-target="modal-login">Login</a></li>
-                        <li class = "logged-out"><a href="#" class="modal-trigger" data-target="modal-signup">Sign up</a></li>
+                        <li><a href="signup.html">SignUp Page</a></li>
                     </ul>
                     <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
                 </div>
@@ -34,41 +30,7 @@
             </div>
         </header>
 
-        <div id="modal-signup" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h4>Sign up</h4><br />
-                <form id="signup-form">
-                    <div class="input-field">
-                        <input type="email" id="signup-email" required />
-                        <label for="signup-email">Email address</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="signup-password" required />
-                        <label for="signup-password">Choose password</label>
-                    </div>
-                    <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-                </form>
-            </div>
-        </div>
 
-        <div id="modal-login" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h4>Login</h4><br />
-                <form id="login-form">
-                    <div class="input-field">
-                        <input type="email" id="login-email" required />
-                        <label for="login-email">Email address</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="login-password" required />
-                        <label for="login-password">Choose password</label>
-                    </div>
-                    <button class="btn yellow darken-2 z-depth-0">Sign up</button>
-                </form>
-            </div>
-        </div>
 
 
 
@@ -179,7 +141,7 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+
         <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
@@ -199,31 +161,6 @@
         <!-- Initialize Firebase -->
         <script src="/__/firebase/init.js"></script>
         <script src="Resources/js/script.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
-        <script>
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-          var firebaseConfig = {
-            apiKey: "AIzaSyBgXLiku_q-eNK-bI--dJsP81s1BSagZS0",
-            authDomain: "web-app-540e0.firebaseapp.com",
-            databaseURL: "https://web-app-540e0.firebaseio.com",
-            projectId: "web-app-540e0",
-            storageBucket: "web-app-540e0.appspot.com",
-            messagingSenderId: "158487894974",
-            appId: "1:158487894974:web:2e5d9247de5dddbfdcf7ef",
-            measurementId: "G-5VH2ZZGLF9"
-          };
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-          firebase.analytics();
-
-        const auth =firebase.auth();
-        const db =firebase.firestore();
-        var firebase = require('firebase');
-        var firebaseui = require('firebaseui');
         </script>
 
 
