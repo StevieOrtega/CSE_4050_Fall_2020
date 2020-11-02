@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="Resources/css/signup.css">
         <title>SignUp page</title>
     </head>
+
     <body class="grey lighten-3">
 
         <!-- NAV -->
@@ -17,7 +18,7 @@
                     <li class="logged-in">
                         <a href="#" class="grey-text modal-trigger" data-target="modal-account">Account</a>
                     </li>
-                    <li class="logged-in">
+                    <li class="logged-in" >
                         <a href="#" class="grey-text modal-trigger" id="logout">Logout</a>
                     </li>
                     <li class="logged-in">
@@ -26,7 +27,7 @@
                     <li class="logged-out">
                         <a href="#" class="blue-text modal-trigger" data-target="modal-login">Login</a>
                     </li>
-                    <li class="logged-out">
+                    <li class="logged-out" >
                         <a href="#" class="blue-text modal-trigger" data-target="modal-signup">sign up</a>
                     </li>
                 </ul>
@@ -49,6 +50,7 @@
                 </form>
             </div>
         </div>
+
 <!-- LOGIN -->
         <div id="modal-login" class="modal">
             <div class="modal-content">
@@ -66,6 +68,7 @@
                 </form>
             </div>
         </div>
+
         <!-- ACCOUNT MODAL -->
         <div id="modal-account" class="modal">
         <div class="modal-content center-align">
@@ -75,34 +78,42 @@
         </div>
     </div>
 
-        <!-- LOGIN -->
+        <!-- create -->
         <div id="modal-create" class="modal">
             <div class="modal-content">
                 <h4>Create Account</h4><br />
-                <form id="guide-form">
+                <form id="create-form">
                     <div class="input-field">
-                        <input type="text" id="title" required />
+                        <input type="text" id="title" required>
                         <label for="title">Guide Title</label>
                     </div>
                     <div class="input-field">
-                        <input type="content" id="materialize" required />
-                        <label for="content">guide content</label>
+                        <textarea id="content" class="materialize-textarea" required></textarea>
+                        <label for="content">Guide content</label>
                     </div>
                     <button class="btn yellow darken-2 z-depth-0">create</button>
                 </form>
             </div>
         </div>
 
+        <!-- Guide list -->
+        <div class="containter" style="margin-top: 40px;">
+            <ul class="collapsible z-depth-0 guides" style="border: none;">
+            </ul>
+        </div>
 
-    </body>
+
+
+
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+
+
 
 
         <script>
@@ -113,8 +124,6 @@
             authDomain: "web-app-540e0.firebaseapp.com",
             databaseURL: "https://web-app-540e0.firebaseio.com",
             projectId: "web-app-540e0",
-            storageBucket: "web-app-540e0.appspot.com",
-            messagingSenderId: "158487894974",
             appId: "1:158487894974:web:2e5d9247de5dddbfdcf7ef",
             measurementId: "G-5VH2ZZGLF9"
           };
@@ -126,12 +135,13 @@
         const auth =firebase.auth();
         const db =firebase.firestore();
 
-            //update firebaser
+            //update firebase
+            db.settings({timestampsInSnapshots: true});
         </script>
 
        <!-- Myscripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="Resources/js/index.js"></script>
     <script src="Resources/js/auth.js"></script>
-
+    </body>
 </html>
